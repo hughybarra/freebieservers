@@ -8,10 +8,19 @@
  * Controller of the angularFreeApp
  */
 angular.module('angularFreeApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+	.controller('MainCtrl', function ($scope) {
+
+		console.log('main controller running');
+
+		var url = 'http://www.github.com';
+		var dataType = 'json';
+		var method = 'get';
+		var data = {
+			'a': 'aata', 
+			'b': 'bata',
+			'c': 'cata', 
+			'd': 'data'
+
+		};
+
+	});

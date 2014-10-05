@@ -24,13 +24,24 @@ angular
         controller: 'MainCtrl'
       })
       .when('/form1',{
-        templateUrl: 'views/forms/form1.html'
+        templateUrl: 'views/forms/form1.html',
+        controller: 'Form1Ctrl'
       })
       .when('/form2',{
-        templateUrl: 'views/forms/form2.html'
+        templateUrl: 'views/forms/form2.html',
+        controller: 'Form2Ctrl'
       })
       .when('/form3', {
-        templateUrl: 'views/forms/form3.html'
+        templateUrl: 'views/forms/form3.html',
+        controller: 'Form3Ctrl'
+      })
+      .when('/tos', {
+        templateUrl: 'views/forms/tos.html',
+        controller: 'TosCtrl'
+      })
+      .when('/upgrades', {
+        templateUrl: 'views/forms/upgrades.html',
+        controller: 'UpgradesCtrl'
       })
       .otherwise({
         redirectTo: '/'
