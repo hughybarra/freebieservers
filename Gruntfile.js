@@ -21,8 +21,11 @@ module.exports = function (grunt) {
     dist: 'dist'
   };
 
+
+
+
   // Define the configuration for all the tasks
-  grunt.initConfig({
+  grunt.initConfig({ 
 
     // Project settings
     yeoman: appConfig,
@@ -207,7 +210,7 @@ module.exports = function (grunt) {
         src: [
           '<%= yeoman.dist %>/scripts/{,*/}*.js',
           '<%= yeoman.dist %>/styles/{,*/}*.css',
-          '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+          // '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
           '<%= yeoman.dist %>/styles/fonts/*'
         ]
       }
@@ -245,6 +248,11 @@ module.exports = function (grunt) {
     // By default, your `index.html`'s <!-- Usemin block --> will take care of
     // minification. These next options are pre-configured if you do not wish
     // to use the Usemin blocks.
+
+
+    // UNCOMMENTED THIS 
+    // ================
+
     // cssmin: {
     //   dist: {
     //     files: {
@@ -266,6 +274,9 @@ module.exports = function (grunt) {
     // concat: {
     //   dist: {}
     // },
+
+    // UNCOMMENTED THIS 
+    // ================
 
     imagemin: {
       dist: {
@@ -384,10 +395,22 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
+    },
+
+
+    // compile less stylesheets to css -----------------------------------------
+    less: {
+      build: {
+        files: {
+          'dist/styles/main.css': 'app/styles/main.less'
+        }
+      }
     }
+
   });
+  grunt.loadNpmTasks('grunt-contrib-less');
 
-
+  
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
     if (target === 'dist') {
       return grunt.task.run(['build', 'connect:dist:keepalive']);
@@ -438,4 +461,7 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
+
+
 };

@@ -12,15 +12,4 @@ angular.module('angularFreeApp')
 
 		console.log('main controller running');
 
-		var url = 'http://www.github.com';
-		var dataType = 'json';
-		var method = 'get';
-		var data = {
-			'a': 'aata', 
-			'b': 'bata',
-			'c': 'cata', 
-			'd': 'data'
-
-		};
-
 	});

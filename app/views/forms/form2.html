@@ -31,11 +31,13 @@
             ===================
             =================== -->
 
-
             <div class="row">
 
-                <div class="option col-lg-3">
-                    <div class="panel panel-default">
+                <div class="col-lg-3">
+
+                    <div class="panel panel-default" ng-click="formOptionClick(option1)"
+                    ng-class="{'optionActive': formOption.value1, 'optionOff': formOption.value1}">
+
                         <div class="panel-heading text-center">
                             <h4>Counter Strike Source - Free </h4>
                         </div>
@@ -52,7 +54,8 @@
             =================== -->
 
                 <div class="option col-lg-3">
-                    <div class="panel panel-default">
+
+                    <div class="panel panel-default" ng-click="formOptionClick(option2)">
                         <div class="panel-heading text-center">
                             <h4>Counter-Strike: GO - Free</h4>
                         </div>
@@ -70,8 +73,9 @@
             =================== -->
 
 
+
                 <div class="option col-lg-3">
-                    <div class="panel panel-default">
+                    <div class="panel panel-default" ng-click="formOptionClick(option3)">
                         <div class="panel-heading text-center">
                             <h4>HL2 - Deathmatch - Free</h4>
                         </div>
@@ -89,7 +93,7 @@
             =================== -->
 
                 <div class="option col-lg-3">
-                    <div class="panel panel-default">
+                    <div class="panel panel-default" ng-click="formOptionClick(option4)">
                         <div class="panel-heading text-center">
                             <h4>HL2 - Garrysmod - Free</h4>
                         </div>
@@ -106,7 +110,7 @@
             =================== -->
 
                 <div class="option col-lg-3">
-                    <div class="panel panel-default">
+                    <div class="panel panel-default" ng-click="formOptionClick(option5)">
                         <div class="panel-heading text-center">
                             <h4>Team Fortress 2 - Free</h4>
                         </div>

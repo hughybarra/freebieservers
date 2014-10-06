@@ -12,6 +12,8 @@
             
                 <div class="panelSizer col-lg-6">     
                     <div class="panel panel-default">
+
+
                         <div class="panel-heading text-center">
                             <p>heading</p>
                         </div><!-- end panel heading -->
@@ -20,37 +22,49 @@
                            
                             <form role="form">
 
-                                <div class="form-group">
+
+
+
+
+                                <div class="form-group" id="formFirst">
                                     <label for="userFirst">First Name</label>
-                                    <input type="email" class="form-control" id="userFirst" placeholder="Enter email">
+                                    <input type="text" class="form-control" id="userFirst" ng-model="form.firstName">
                                 </div>
 
-                                <div class="form-group">
+
+
+
+
+
+
+                                <div class="form-group" id="formLast">
                                     <label for="userLast">Last Name</label>
-                                    <input type="email" class="form-control" id="userLast" placeholder="Enter email">
+                                    <input type="text" class="form-control" id="userLast" ng-model="form.lastName">
                                 </div>
 
 
 
 
-                                <div class="form-group">
-                                    <label for="userEmail">Email address</label>
-                                    <input type="email" class="form-control" id="userEmail" placeholder="Enter email">
+                                <div class="form-group" id="formEmail">
+
+                                    <label for="userEmail">Email</label>
+                                    <input type="email" class="form-control" id="userEmail" placeholder="Enter email" ng-model="form.email">
+
                                 </div>
 
 
-                                <div class="form-group">
+                                <div class="form-group" id="formPassword">
                                     <label for="userPassword">Password</label>
-                                    <input type="password" class="form-control" id="userPassword" placeholder="Password">
+                                    <input type="password" class="form-control" id="userPassword" ng-model="form.password">
                                 </div>
 
-                                <div class="form-group">
+                                <div class="form-group" id="formPassword1">
                                     <label for="userPassword1">Password</label>
-                                    <input type="password" class="form-control" id="userPassword1" placeholder="Password">
+                                    <input type="password" class="form-control" id="userPassword1" ng-model="form.password1">
                                 </div>
 
                                 <!-- countryies dropdown -->
-                                <select id="countries" name="countries">
+                                <select id="countries" name="countries" ng-model="form.country" class="form-control">
                                 <option value="AF">Afghanistan</option>
                                 <option value="AX">Åland Islands</option>
                                 <option value="AL">Albania</option>
@@ -333,7 +347,7 @@
                         </div><!-- end panel body -->
 
                     </div><!-- end panel -->
-                     <a href="/"><div class="btn btn-default pull-right">Submit</div></a>
+                     <a ng-click="submitForm()"><div class="btn btn-default pull-right">Submit</div></a>
                 </div><!-- end panel sizer -->
 
 
